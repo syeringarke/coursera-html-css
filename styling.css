@@ -1,0 +1,95 @@
+/* all elements will count padding and borders inside the total width and height. */
+*{
+    box-sizing: border-box
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center 
+}
+/* styles for the content of each box (label is at the top right) */
+.chicken, .beef, .sushi {
+    border: 1px solid black; /* adds a black border around each box */
+    margin: 10px; /* adds space between boxes */
+    padding-top: 20px;
+    padding: 30px 15px 15px 15px; /* adds space inside the box */
+    position: relative; /* so we can position h2 inside */
+    overflow: hidden; /* hides any overflow content */
+}
+
+.chicken h2, .beef h2, .sushi h2 {
+    text-align: right; /* align text to the right */
+    position: absolute; /*  places h2 in the corner  */
+    top: 0;  /* sticks h2 to the top */
+    right: 0;  /* sticks h2 to the right */
+    margin: 0;  /* removes space around h2 */
+    padding: 10px; /*  adds space inside h2 box */
+    border: 1px solid black; /* border around the h2 */
+    font-size: 20px; /* adds space for the h2 box */
+
+}
+
+/* styles for the h2 inside each box (label at the top right) */
+.chicken, .beef, .sushi {
+    background-color: darkgray; /* dark gray background for headings */
+}
+
+/* background colors and text colors for each h2 */
+.chicken h2 {
+    background-color: pink; /* pink background */
+    color: black; /* black text for better contrast */
+}
+.beef h2 { 
+    background-color: red; /* red background */
+    color: white; /* white text for better contrast */
+}
+
+.sushi h2 {
+    background-color: yellow; /* yellow background */
+    color: black; /* black text for better contrast */
+}
+
+/* for mobile view should be vertically */
+.chicken, .beef, .sushi {
+    width: 100%;
+    display: block; /* makes them take full width of the container */
+}
+
+
+/* Responsive layout */
+
+/* for tablet view */
+@media (mid-width: 768px) and (max-width: 991px) {
+    .threesections {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center; /* centers items */
+    }
+
+    .chicken, .beef {
+        width: 50%; /* each takes half width */
+    }   
+
+    .sushi {
+        width: 100%; /* takes full width below */
+    }
+}
+
+/* for desktop view should horizontally */
+@media (min-width: 768px)  {
+    .threesections {
+        display: flex; /* enables flexbox layout for horizontal alignment */
+        flex-wrap: wrap; /* allows items to wrap to the next line */
+
+    }
+
+    .chicken, .beef, .sushi {
+        width: 30%;  /* each box takes up 30% of the row */
+        margin: 1.5%; /* adds space between the boxes for better layout */
+    }   
+}
