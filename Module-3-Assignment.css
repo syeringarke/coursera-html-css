@@ -132,6 +132,13 @@ body {
   border-bottom: 1px solid #aaa;
 }
 
+/* shows back to top in chicken for mobile view */
+@media (max-width: 767px) {
+  .back-to-top.chicken-only {
+    display: block;
+  }
+}
+
 /* shows back to top in beef sushi for mobile view */
 @media (max-width: 767px) {
   .back-to-top.beef-only,
@@ -169,8 +176,14 @@ body {
   }
 }
 
+/* add bottom spacing for sushi section on mobile and tablet */
+@media (max-width: 991px) {
+  #sushi {
+    padding-bottom: 20px;
+  }
+}
+
 /* smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
-
