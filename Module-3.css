@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+  font-family: arial, sans-serif;
+  background-color: white;
+}
+
+/* wrapper for the whole navbar section */
+.menu-toggle-wrapper {
+  background-color: #a9a9a9;
+  position: relative;
+}
+
+/* navbar container */
+.navbar {
+  background-color: #a9a9a9 !important;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+/* brand text inside navbar */
+.navbar-brand {
+  color: black;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* center content and spacing in navbar container */
+.container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 !important;
+}
+
+/* hamburger icon button for mobile */
+.menu-toggle-wrapper label.btn {
+  margin: 0;
+  padding: 4px 10px;
+}
+
+/* dropdown menu container for mobile view */
+#mobileMenu {
+  display: none;
+  background-color: #a9a9a9;
+  border-radius: 0;
+}
+
+/* each link item in mobile dropdown */
+#mobileMenu .dropdown-item {
+  border-radius: 0 !important;
+  padding: 10px 15px;
+  background-color: #d3d3d3;
+  color: black;
+  border-bottom: 1px solid #aaa;
+  text-decoration: none;
+  display: block;
+}
+
+
+/* hover effect for dropdown items */
+#mobileMenu .dropdown-item:hover {
+  background-color: #c0c0c0;
+}
+
+/* show the dropdown when menu toggle is checked */
+#menuToggle:checked ~ #mobileMenu {
+  display: block;
+}
+
+/* push main content down when dropdown is open */
+#menuToggle:checked ~ .main-content-wrapper {
+  margin-top: 150px;
+}
+
+/* box container for each menu item */
+.menu-box {
+  background-color: #A9A9A9;
+  margin: 10px;
+  border-radius: 0;
+  padding: 15px;
+}
+
+/* back to top styling */
+.back-to-top {
+  display: none;
+  width: fit-content;
+  margin: 1.5rem auto 0;
+  background-color: transparent;
+  color: blue;
+  text-decoration: underline;
+  border: none;
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* adjust menu box spacing */
+.menu-box {
+  padding: 15px;
+}
+
+/* mobile dropdown styling */
+#mobileMenu {
+  display: none;
+  background-color: #ffffff;
+  border-radius: 0 !important;
+  border: none;
+}
+
+/* dropdown items styling */
+#mobileMenu .list-group-item {
+  background-color: #ffffff;
+  border-radius: 0 !important;
+  border: 1px solid #aaa;
+  border-bottom: none;
+  margin-bottom: -1px;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+/* hover effect for dropdown items */
+#mobileMenu .list-group-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* bottom border for sushi */
+#mobileMenu .list-group-item:last-child {
+  border-bottom: 1px solid #aaa;
+}
+
+/* shows back to top in chicken for mobile view */
+@media (max-width: 767px) {
+  .back-to-top.chicken-only {
+    display: block;
+  }
+}
+
+/* shows back to top in beef sushi for mobile view */
+@media (max-width: 767px) {
+  .back-to-top.beef-only,
+  .back-to-top.sushi-only {
+    display: block;
+  }
+}
+
+/* shows back to top in sushi for tablet view  */
+@media (min-width: 768px) and (max-width: 991px) {
+  .back-to-top.sushi-only {
+    display: block;
+  }
+}
+
+/* back to top are hidden for  desktop view */
+@media (min-width: 992px) {
+  .back-to-top {
+    display: none;
+  }
+}
+
+/* navbar responsiveness for mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* adjust navbar padding for very small screens */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 6px;
+  }
+}
+
+/* add bottom spacing for sushi section on mobile and tablet */
+@media (max-width: 991px) {
+  #sushi {
+    padding-bottom: 20px;
+  }
+}
+
+/* smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
