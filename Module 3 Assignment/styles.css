@@ -1,7 +1,7 @@
 
 /* set body to relative so absolutely positioned elements inside can align properly */
 body {
-  position: relative; 
+  position: relative;  
 }
 
 /* style for the top navbar */
